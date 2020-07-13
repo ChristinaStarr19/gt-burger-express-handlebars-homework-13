@@ -13,9 +13,14 @@ app.use(express.json());
 
 // Set Handlebars.
 var exphbs = require("express-handlebars");
+const { response } = require("express");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+
+app.get("/", function(req, res) {
+  response.send("Hello World!");
+})
 
 // Import routes and give the server access to them.
 // var routes = require("./controllers/catsController.js");
