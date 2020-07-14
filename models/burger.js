@@ -6,8 +6,8 @@ var burger = {
     orm.all("burgers", function(res) {
       cb(res);
     });
-  }
+  },
+};
 
-}
-
+// Export the database functions for the controller (catsController.js).
 module.exports = burger;

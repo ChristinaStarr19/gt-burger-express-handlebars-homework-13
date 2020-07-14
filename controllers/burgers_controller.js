@@ -8,12 +8,11 @@ var burger = require("../models/burger");
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
   burger.all(function(data) {
-    
-    console.log(hbsObject);
-    res.render("index", {burgers: data});
+    console.log({ burgers: data});
+    res.render("index", { burgers: data});
   });
 });
 
 
-
+// Export routes for server.js to use.
 module.exports = router;
