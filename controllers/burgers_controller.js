@@ -6,13 +6,12 @@ var router = express.Router();
 var burger = require("../models/burger.js");
 
 // Create all our routes and set up logic within those routes where required.
-router.get("/", function(req, res) {
-  burger.all(function(data) {
+router.get("/", function (req, res) {
+  burger.selectAll(function (data) {
     console.log("The function is running");
-    res.render("index", { burgers: data});
+    res.render("index", { burgers: data });
   });
 });
-
 
 // Export routes for server.js to use.
 module.exports = router;
