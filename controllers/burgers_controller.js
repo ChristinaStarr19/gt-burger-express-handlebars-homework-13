@@ -33,5 +33,11 @@ router.post("/api/burgers", function(req, res) {
     res.json({ id: result.insertId });
   });
 });
+
+router.put("/api/burgers/:id", function(req, res) {
+  burger.updateOne({devoured: true},"id=" + req.params.id, function(result) {
+    console.log(result);
+  })
+})
 // Export routes for server.js to use.
 module.exports = router;
