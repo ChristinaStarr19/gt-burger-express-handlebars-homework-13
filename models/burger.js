@@ -7,7 +7,18 @@ var burger = {
       cb(res);
     });
   },
+  
+  // insertOne: function( cols1, cols2, vals1,cb) {
+  //   orm.insertOne("burgers",  cols1, cols2, vals1, function(res) {
+  //     cb(res);
+  //   });
+  // },
+  
+  insertOne: function(cols, vals, cb) {
+    orm.insertOne("burgers", cols, vals, function(res) {
+      cb(res);
+    });
+  },
 };
 
-// Export the database functions for the controller (catsController.js).
 module.exports = burger;

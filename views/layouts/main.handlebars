@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+	<link rel="stylesheet" href="../../public/assets/css/burger_style.css" />
 	<title>Eat-Da-Burger</title>
 	<script src="https://code.jquery.com/jquery.js"></script>
 
@@ -12,6 +12,32 @@
 <body>
 	{{{ body }}}
 	<script>
+		$(function () {
+			//Create new burger api request
+
+
+			$(".create-burger").on("submit", function (event) {
+				// Make sure to preventDefault on a submit event.
+				event.preventDefault();
+
+				var newBurger = {
+					burger_name: $("#nb").val(),
+					sleepy: false
+				};
+
+				// Send the POST request.
+				$.ajax("/api/burgers", {
+					type: "POST",
+					data: newBurger
+				}).then(
+					function () {
+						console.log("created new burger");
+						// Reload the page to get the updated list
+						location.reload();
+					}
+				);
+			});
+		});
 	</script>
 </body>
 
