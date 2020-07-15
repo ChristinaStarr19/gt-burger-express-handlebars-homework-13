@@ -1,4 +1,4 @@
-# gt-burger-express-handlebars-homework-13
+# Eat-Da-Burger App using Express Handlebars, express-handlebars-homework-13
 # Employee Database using MySQL, Express and NodeJS
 
 ## Table of Contents
@@ -20,11 +20,11 @@
 
 This Hamburger app was designed using Node Express Servers, Handlebars Framework, and JAWSBD database. It retrieves information from the user and inputs their data dynamically into a database within a remote database, and posts the information to the page. It was also designed to meet the criteria for GT Full-stack Flex program homework requirements.
 
-![Deployed site for portfolio](./screenshot.png)
+![Deployed site for portfolio](.)
 
 Link to screen recording:
 
-[Team Profile Generator](https://drive.google.com/file/d/14FCGNsue6MdWY3NH-5l7uqWY-5DVo7d5/view)
+[Team Profile Generator](h)
 
 ## Credits
 
