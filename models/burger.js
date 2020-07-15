@@ -19,6 +19,13 @@ var burger = {
       cb(res);
     });
   },
+
+  updateAll: function(objColVals, condition, cb) {
+    orm.updateAll("cats", objColVals, condition, function(res) {
+      cb(res);
+    });
+  },
+
 };
 
 module.exports = burger;
